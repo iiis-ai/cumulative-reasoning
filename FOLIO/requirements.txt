@@ -1,0 +1,28 @@
+colorama
+datasets
+flexgen==0.1.7
+gradio_client==0.2.5
+gradio==3.31.0
+markdown
+numpy
+pandas
+Pillow>=9.5.0
+pyyaml
+requests
+safetensors==0.3.1
+sentencepiece
+tqdm
+scipy
+bitsandbytes==0.39.0; platform_system != "Windows"
+llama-cpp-python==0.1.53; platform_system != "Windows"
+transformers>=4.29.2
+peft
+accelerate
+jupyter
+openai
+parsimonious
+diskcache
+pygtrie
+einops
+guidance==0.0.64 for openai
+# guidance==0.0.61 for llama
