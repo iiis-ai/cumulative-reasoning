@@ -1,12 +1,12 @@
 ## Introduction
 
-Official implementation of paper "Cumulative Reasoning with Large Language Models".
+Official implementation of paper "Cumulative Reasoning with Large Language Models" (https://arxiv.org/abs/2308.04371).
 
 ## Installation
 
 `pip install -r requirements.txt`
 
-For more usage helps, please refer to the README.md in each subdirectory.
+For more usage help, please refer to the README.md in each subdirectory.
 
 ## Acknowledgement
 
