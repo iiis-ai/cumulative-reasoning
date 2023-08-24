@@ -6,8 +6,11 @@ import re
 import sympy
 import ast
 import os
+import json
 import pandas as pd
 import argparse
+import openai
+# openai.proxy = "http://..."
 
 os.environ["OPENAI_API_KEY"] = 'sk-...'
 
@@ -194,7 +197,7 @@ valid_program = guidance('''
     Judgement:
     {{/assistant}}
     {{#assistant}}{{select "judgement" options=valid_judgement}} {{/assistant}}
-    ''', silent=True
+    '''
 )
 verifier_program = guidance(
     '''
@@ -594,36 +597,45 @@ if __name__ == "__main__":
 
     puzzles = puzzles[900:1000]
 
+    log_results = []
     cnt = args.resume_cor
 
     info = {'tot': args.resume, 'acc': 0.0, 'Solving': ''}
 
     pbar = tqdm(puzzles[args.resume:])
 
+    total_try = 0
     for puzzle in pbar:
+        this_result = {'puzzle': puzzle}
         info['Solving'] = puzzle
         if info['tot'] > 0:
             info['acc'] = cnt / info['tot']
+            info['total_try'] = total_try
         pbar.set_postfix(info, refresh=True)
 
+        info['tot'] = info['tot'] + 1
         for i in range(args.b):
-            success, cnt, output = solve(puzzle, pbar)
+            success, try_cnt, output = solve(puzzle, pbar)
 
-            info['tot'] = info['tot'] + 1
+            total_try += try_cnt
+            this_result[f'try_cnt_branch_{i}'] = try_cnt
             if success:
                 expression = output.strip().split('\n')[-1].lower().replace('answer: ', '').split('=')[0]
-                pbar.write(f"PUZZLE:{info['Solving']}\nANSWER:{expression}\nTRY CNT:{cnt}")
+                pbar.write(f"PUZZLE:{info['Solving']}\nANSWER:{expression}\nTRY CNT:{try_cnt}")
                 numbers = re.findall(r'\d+', expression)
                 problem_numbers = re.findall(r'\d+', puzzle)
                 if sorted(numbers) != sorted(problem_numbers):
                     pbar.write('INVALID ANSWER')
                     pass
                 else:
+                    this_result['output'] = expression
                     try:
                         if int(sympy.simplify(expression) == 24):
                             pbar.write('CORRECT!')
+                            this_result['correct'] = True
                             cnt += 1
                         else:
+                            this_result['correct'] = False
                             pbar.write('WRONG!')
                         break
                     except Exception as e:
@@ -631,5 +643,9 @@ if __name__ == "__main__":
                         pbar.write('WRONG!')
                         break
 
+        if 'output' not in this_result:
+            this_result['output'] = 'NO OUTPUT'
+            this_result['correct'] = False
 
-
+        with open(f'game24_b={args.b}.log', 'a') as f_write:
+            f_write.write(json.dumps(this_result) + '\n')
