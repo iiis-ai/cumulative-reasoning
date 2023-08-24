@@ -2,6 +2,8 @@
 
 Official implementation of paper "Cumulative Reasoning with Large Language Models" (https://arxiv.org/abs/2308.04371).
 
+**Achieving 98% accuracy for the Game of 24 (+24% compared to Tree-of-Thoughts), and 58% accuracy for the MATH dataset (+4.2% compared to PHP)!**
+
 ## Installation
 
 `pip install -r requirements.txt`
