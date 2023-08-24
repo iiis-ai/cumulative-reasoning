@@ -52,57 +52,6 @@ args = parser.parse_args()
 gpt4 = guidance.llms.OpenAI("gpt-4")
 guidance.llm = guidance.llms.OpenAI(args.model, caching=True)
 
-
-def simplify(exp):
-    try:
-        if re.search("[^0-9+\-*/.(),=\s]", exp.strip()):
-            return "Invalid Expressions"
-        return str(sympy.simplify(exp))
-    except Exception as e:
-        return "Invalid Expressions"
-
-
-tool_functions = [{
-    "name": "sympy_simplify",
-    "description": "Simplifies the given expression.",
-    "parameters": {
-        "type": "object",
-        "properties": {
-            "exp": {
-                "type": "string",
-                "description": "The expression with only basic arithmetic operations, e.g. 4 * 6 + 5 - 10."
-            }
-        },
-        "required": ["exp"]
-    }
-}]
-
-chat_tool_gen = guidance("""{{~#each range(max_calls)~}}
-    {{~#assistant~}}
-    {{gen 'func_inner' temperature=temperature max_tokens=max_tokens_per_chunk function_call=function_call~}}
-    {{~/assistant~}}
-
-    {{#if not callable(func_inner)}}{{break}}{{/if}}
-
-    {{~#function name=func_inner.__name__~}}
-    {{func_inner()}}
-    {{~/function~}}
-{{~/each~}}{{set args[0] func_inner}}""", max_calls=20, function_call="auto", max_tokens_per_chunk=500,
-                         temperature=args.temperature)
-
-program2 = guidance("""
-{{~#system~}}
-You are a helpful math assistant.
-{{>tool_def functions=functions}}
-{{~/system~}}
-
-{{~#user~}}
-Calculate the value of 1919810 * 114514
-{{~/user~}}
-
-{{>chat_tool_gen 'answer'}}""", chat_tool_gen=chat_tool_gen)
-
-
 valid_equivalence = ['Equivalent', 'Different']
 equivalence_judger = guidance(
     """
@@ -117,47 +66,6 @@ equivalence_judger = guidance(
     {{/user}}
     {{#assistant}}{{select "equivalence" options=valid_equivalence}}{{/assistant}}
     """, llm=gpt4, valid_equivalence=valid_equivalence)
-
-class Type_Q:
-    def __init__(self, problem_subject="", problem_content=None, hints=[], generated_simple_questions_and_answers=[],
-                 final_solution="", final_answer=""):
-        self.problem_subject = problem_subject
-        self.problem_content = problem_content
-        self.hints = hints
-        self.generated_simple_questions_and_answers = generated_simple_questions_and_answers
-        self.final_solution = final_solution
-        self.final_answer = final_answer
-        self.next_hint_id = len(self.hints)
-        self.next_question_id = len(self.generated_simple_questions_and_answers)
-
-    def clear(self):
-        self.hints = []
-        self.generated_simple_questions_and_answers = []
-        self.final_solution = ""
-        self.final_answer = ""
-        self.next_hint_id = 0
-        self.next_question_id = 0
-
-    def __str__(self):  # in json format
-        assert self.problem_content is not None
-        return json.dumps(self.__dict__)
-
-    def formatted_hints(self):
-        return self.hints
-        return json.dumps(self.hints)
-
-    def formatted_generated_simple_questions_and_answers(self):
-        return self.generated_simple_questions_and_answers
-        return json.dumps(self.generated_simple_questions_and_answers)
-
-    def get_next_hint_id(self):
-        self.next_hint_id += 1
-        return self.next_hint_id
-
-    def get_next_question_id(self):
-        self.next_question_id += 1
-        return self.next_question_id
-
 
 def try_wrapper(func):
     def inner(*args, **kwargs):

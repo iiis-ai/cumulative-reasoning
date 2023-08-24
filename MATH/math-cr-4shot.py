@@ -1,5 +1,4 @@
-# MATH with Cumulative Reasoning
-## HAVENT FINISHED YET
+# MATH with Cumulative Reasoning (4-shot)
 
 import guidance
 import json

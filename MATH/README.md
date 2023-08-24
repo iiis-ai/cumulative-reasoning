@@ -6,9 +6,11 @@ Please set `os.environ["OPENAI_API_KEY"]="YOUR_API_KEY"` in all python scripts.
 
 Make sure that your device is able to connect to [OpenAI API](https://platform.openai.com/docs/api-reference). 
 
+Make sure you are using guidance of version 0.0.64 .
+
 ## Run paper experiments
 
-You can use any openai model (`gpt-3.5-turbo`, `gpt-4`, etc.).
+You can use any openai model (`gpt-3.5-turbo`, `gpt-4`, etc.) as `YOUR_MODEL`.
 - Complex-CoT:
 `python math-complex-cot.py --model=YOUR_MODEL`
 - Complex-CoT + PHP:
