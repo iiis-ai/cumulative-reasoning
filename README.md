@@ -1,10 +1,17 @@
+# Cumulative Reasoning with Large Language Models
+
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/cumulative-reasoning-with-large-language/math-word-problem-solving-on-math)](https://paperswithcode.com/sota/math-word-problem-solving-on-math?p=cumulative-reasoning-with-large-language)
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2308.04371)
+![Python 3.10](https://img.shields.io/badge/python-3.10-green.svg)
+
 ## Introduction
 
 Official implementation of paper "Cumulative Reasoning with Large Language Models" (https://arxiv.org/abs/2308.04371).
 
 - **Achieving 98% accuracy for the Game of 24 (+24% compared to Tree-of-Thoughts)!** 
 
-- **Achieving 58% accuracy for the MATH dataset (+4.2% compared to PHP)!**
+- **Achieving 58% accuracy on the MATH dataset (+4.2% compared to PHP)!**
 
 ## Installation
 
