@@ -24,5 +24,6 @@ parsimonious
 diskcache
 pygtrie
 einops
-guidance==0.0.64 for openai
+guidance==0.0.64
+# guidance==0.0.64 for openai
 # guidance==0.0.61 for llama
