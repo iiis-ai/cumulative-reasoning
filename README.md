@@ -11,15 +11,21 @@ Official implementation of paper "Cumulative Reasoning with Large Language Model
 
 - **Achieving 98% accuracy for the Game of 24 (+24% compared to Tree-of-Thoughts)!** 
 
-- **Achieving 58% accuracy on the MATH dataset (+4.2% compared to PHP)!**
+- **Achieving 58% accuracy on the MATH dataset without code environment using GPT-4-0314 (+4.2% compared to PHP)!**
 
 - **Achieving 43% relative improvement on the hardest Level 5 MATH problems (22.4% to 32.1%)!**
+
+- **Achieving 72.2% accuracy on the MATH dataset without code environment using GPT-4-1106-preview (+20.2% compared to PAL (PoT))!**
 
 ## Installation
 
 `pip install -r requirements.txt`
 
 For more usage help, please refer to the README.md in each subdirectory.
+
+## CR Agent: Solving MATH Problems with Code Environment
+
+please see `/CR-Agent` folder for the output log and prompts on MATH dataset, we will update the code soon (based on ToRA).
 
 ## Acknowledgement
 

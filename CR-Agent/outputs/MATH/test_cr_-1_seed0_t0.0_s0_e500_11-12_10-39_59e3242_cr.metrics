@@ -1,0 +1,16 @@
+Num samples: 500
+Num scores: 500
+Timeout samples: 0
+Empty samples: 0
+Prompt type: cr
+use_train_prompt_format: False
+code_concat: True
+max_func_call: 16
+code_exec_warning: True
+max_code_fix_retries: 4
+Mean score: [72.2]
+Type scores: {'Algebra': 86.3, 'Counting & Probability': 71.1, 'Geometry': 53.7, 'Intermediate Algebra': 51.5, 'Number Theory': 88.7, 'Prealgebra': 86.6, 'Precalculus': 51.8}
+Level scores: {1: 90.7, 2: 90.0, 3: 81.9, 4: 66.4, 5: 52.2}
+
+Time use: 32586.32s
+Time use: 543:06
