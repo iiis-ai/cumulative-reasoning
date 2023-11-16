@@ -17,7 +17,7 @@ Official implementation of paper "Cumulative Reasoning with Large Language Model
 
 - **Achieving 72.2% accuracy on the MATH dataset with code environment using GPT-4-1106-preview (+20.2% compared to PAL (PoT))!**
 
-- **Focusing on Level 5 problems, the CR Agent showed a remarkable 66.8% improvement over PAL!**
+- **Focusing on Level 5 MATH problems, the CR Agent showed a remarkable 66.8% improvement over PAL!**
 
 ## Installation
 
@@ -27,35 +27,35 @@ For more usage help, please refer to the README.md in each subdirectory.
 
 ## CR Agent: Solving MATH Problems with Code Environment
 
-please see `/CR-Agent` folder for the output log and prompts on MATH dataset, we will update the code soon (based on ToRA).
+please see `/CR-Agent` folder for the output log and prompts on MATH dataset, we will update the code soon (CR Agent v0.1, a minimalist implementation based on ToRA).
 
-### Enhanced Experimental Results on MATH Dataset Using a Python Code Environment:
+### Experimental Results
 
 In this section, we employed GPT-4-Turbo (GPT-4-1106-preview) within a Python code environment, devoid of additional tools like external memory and retrieval systems. The experiment involved a unique setup where only one reasoning context session was utilized. This session was managed by simply accumulating and concatenating strings, and the entire process was executed using a single LLM without the assistance of a verifier LLM. Notably, the implementation was carried out purely using Python strings, without leveraging any specialized frameworks such as Langchain or guidance.
 
 The outcomes of this experimental setup revealed noteworthy results:
 - PAL (Program-Aided Language models): Achieved an accuracy of 52%.
 - ToRA (Tool-Integrated Reasoning Agent): Demonstrated a higher accuracy of 60.8%.
-- CR Agent (Cumulative Reasoning Agent): Significantly outperformed the aforementioned methods with an impressive accuracy of **72.2%**.
+- CR Agent (Cumulative Reasoning Agent) v0.1: Significantly outperformed the aforementioned methods with an impressive accuracy of **72.2%**.
 - Specifically focusing on **Level 5** problems, the CR Agent showed a remarkable **66.8%** improvement over PAL and a **12.7%** relative improvement over ToRA. (For more details, visit the ToRA GitHub repository: https://github.com/microsoft/ToRA).
 
-Certainly! Below are the experimental results formatted into two Markdown tables for clarity and ease of reference:
-
-### Table 1: Category-wise Scores
+#### Category-wise Scores
 
 | Method    | Algebra | Counting & Probability | Geometry | Intermediate Algebra | Number Theory | Prealgebra | Precalculus |
 |-----------|---------|------------------------|----------|----------------------|---------------|------------|-------------|
 | PAL (PoT) | 65.3    | 57.9                   | 31.7     | 30.9                 | 66.1          | 73.2       | 23.2        |
 | ToRA      | 71.8    | 68.4                   | 48.8     | 49.5                 | 66.1          | 67.1       | 44.6        |
-| CR Agent  | 86.3    | 71.1                   | 53.7     | 51.5                 | 88.7          | 86.6       | 51.8        |
+| CR Agent  | **86.3**| **71.1**               | **53.7** | **51.5**             | **88.7**      | **86.6**   | **51.8**    |
 
-### Table 2: Difficulty Level Scores
+#### Difficulty Level Scores
 
 | Method    | Level 1 | Level 2 | Level 3 | Level 4 | Level 5 |
 |-----------|---------|---------|---------|---------|---------|
 | PAL (PoT) | 88.4    | 65.6    | 60.0    | 45.3    | 31.3    |
 | ToRA      | 74.4    | 75.6    | 69.5    | 53.9    | 46.3    |
-| CR Agent  | 90.7    | 90.0    | 81.9    | 66.4    | 52.2    |
+| CR Agent  | **90.7**| **90.0**| **81.9**| **66.4**| **52.2**|
+
+The asterisks highlight the best performing method in each category and difficulty level, clearly indicating the superiority of the CR Agent in this experimental setup.
 
 These tables provide a comprehensive view of the performance of each method across various categories and difficulty levels in the MATH dataset. The CR Agent shows marked improvements in most categories and levels, illustrating its robustness and effectiveness in solving complex mathematical problems, even within the constraints of a simplified experimental setup.
 
