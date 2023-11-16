@@ -17,6 +17,8 @@ Official implementation of paper "Cumulative Reasoning with Large Language Model
 
 - **Achieving 72.2% accuracy on the MATH dataset with code environment using GPT-4-1106-preview (+20.2% compared to PAL (PoT))!**
 
+- **Focusing on Level 5 problems, the CR Agent showed a remarkable 66.8% improvement over PAL!**
+
 ## Installation
 
 `pip install -r requirements.txt`
