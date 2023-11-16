@@ -15,7 +15,7 @@ Official implementation of paper "Cumulative Reasoning with Large Language Model
 
 - **Achieving 43% relative improvement on the hardest Level 5 MATH problems (22.4% to 32.1%)!**
 
-- **Achieving 72.2% accuracy on the MATH dataset with code environment using GPT-4-1106-preview (+20.2% compared to PAL (PoT))!**
+- **Achieving 72.2% accuracy on the MATH dataset with code environment using GPT-4-1106-preview (+20.2% compared to PAL (PoT) )!**
 
 - **Focusing on Level 5 MATH problems, the CR Agent showed a remarkable 66.8% improvement over PAL!**
 
@@ -27,17 +27,17 @@ For more usage help, please refer to the README.md in each subdirectory.
 
 ## CR Agent: Solving MATH Problems with Code Environment
 
-please see `/CR-Agent` folder for the output log and prompts on MATH dataset, we will update the code soon (CR Agent v0.1, a minimalist implementation based on ToRA).
+please see `/CR-Agent` folder for the output log and prompts on the MATH dataset, we will update the code soon (CR Agent v0.1, a minimalist implementation based on ToRA).
 
 ### Experimental Results
 
-In this section, we employed GPT-4-Turbo (GPT-4-1106-preview) within a Python code environment, devoid of additional tools like external memory and retrieval systems. The experiment involved a unique setup where only one reasoning context session was utilized. This session was managed by simply accumulating and concatenating strings, and the entire process was executed using a single LLM without the assistance of a verifier LLM. Notably, the implementation was carried out purely using Python strings, without leveraging any specialized frameworks such as Langchain or guidance.
+In this section, we employed GPT-4-Turbo (GPT-4-1106-preview) with a Python code environment, devoid of additional tools like external memory and retrieval systems. The experiment involved a minimalist setup where only one reasoning context session was utilized. This session was managed by simply accumulating and concatenating the context string, and the entire process was executed using a single LLM without the assistance of a verifier LLM. Notably, the implementation was carried out purely using Python strings, without leveraging any specialized frameworks such as Langchain or guidance.
 
 The outcomes of this experimental setup revealed noteworthy results:
 - PAL (Program-Aided Language models): Achieved an accuracy of 52%.
 - ToRA (Tool-Integrated Reasoning Agent): Demonstrated a higher accuracy of 60.8%.
 - CR Agent (Cumulative Reasoning Agent) v0.1: Significantly outperformed the aforementioned methods with an impressive accuracy of **72.2%**.
-- Specifically focusing on **Level 5** problems, the CR Agent showed a remarkable **66.8%** improvement over PAL and a **12.7%** relative improvement over ToRA. (For more details, visit the ToRA GitHub repository: https://github.com/microsoft/ToRA).
+- Specifically focusing on **Level 5** problems, the CR Agent showed a remarkable **66.8%** improvement over PAL and a **12.7%** relative improvement over ToRA.
 
 #### Category-wise Scores
 
@@ -55,7 +55,7 @@ The outcomes of this experimental setup revealed noteworthy results:
 | ToRA      | 74.4    | 75.6    | 69.5    | 53.9    | 46.3    |
 | CR Agent  | **90.7**| **90.0**| **81.9**| **66.4**| **52.2**|
 
-The asterisks highlight the best performing method in each category and difficulty level, clearly indicating the superiority of the CR Agent in this experimental setup.
+The asterisks highlight the best-performing method in each category and difficulty level, clearly indicating the superiority of the CR Agent in this experimental setup.
 
 These tables provide a comprehensive view of the performance of each method across various categories and difficulty levels in the MATH dataset. The CR Agent shows marked improvements in most categories and levels, illustrating its robustness and effectiveness in solving complex mathematical problems, even within the constraints of a simplified experimental setup.
 
@@ -63,7 +63,7 @@ These tables provide a comprehensive view of the performance of each method acro
 
 ## Acknowledgement
 
-This repo is mainly based on [Guidance](https://github.com/microsoft/guidance), [HuggingFace](https://huggingface.co/) and [Tree of Thoughts](https://github.com/princeton-nlp/tree-of-thought-llm). Thanks for their wonderful work!
+This repo is mainly based on [Guidance](https://github.com/microsoft/guidance), [HuggingFace](https://huggingface.co/), [Tree of Thoughts](https://github.com/princeton-nlp/tree-of-thought-llm) and [ToRA](https://github.com/microsoft/ToRA). Thanks for their wonderful work!
 
 ## Citations
 Please cite the paper and star this repo if you use Cumulative Reasoning (CR) and find it interesting/useful, thanks! Feel free to contact zhangyif21@tsinghua.edu.cn | yangjq21@mails.tsinghua.edu.cn or open an issue if you have any questions.
