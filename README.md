@@ -25,6 +25,7 @@ Official implementation of paper "Cumulative Reasoning with Large Language Model
 
 For more usage help, please refer to the README.md in each subdirectory.
 
+
 ## CR Agent: Solving MATH Problems with Code Environment
 
 please see `/CR-Agent` folder for the output log and prompts on the MATH dataset, we will update the code soon (CR Agent v0.1, a minimalist implementation based on ToRA).
@@ -60,6 +61,10 @@ The asterisks highlight the best-performing method in each category and difficul
 These tables provide a comprehensive view of the performance of each method across various categories and difficulty levels in the MATH dataset. The CR Agent shows marked improvements in most categories and levels, illustrating its robustness and effectiveness in solving complex mathematical problems, even within the constraints of a simplified experimental setup.
 
 
+
+## CR Agent Assistant v0.1
+
+see `./CR-Agent-Assistant/cr-agent-assistant-v0.1.md` for a minimalist implementation based on OpenAI Assistant API.
 
 ## Acknowledgement
 
