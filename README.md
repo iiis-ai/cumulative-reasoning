@@ -17,7 +17,7 @@ Official implementation of paper "Cumulative Reasoning with Large Language Model
 
 - **Achieving 72.2% accuracy on the MATH dataset with code environment using GPT-4-1106-preview (+20.2% compared to PAL (PoT) )!**
 
-- **Focusing on Level 5 MATH problems, the CR Agent showed a remarkable 66.8% improvement over PAL!**
+- **Focusing on Level 5 MATH problems, the CR Agent v0.1 showed a remarkable 66.8% improvement over PAL!**
 
 ## Installation
 
@@ -28,7 +28,7 @@ For more usage help, please refer to the README.md in each subdirectory.
 
 ## CR Agent: Solving MATH Problems with Code Environment
 
-please see `/CR-Agent` folder for the output log and prompts on the MATH dataset, we will update the code soon (CR Agent v0.1, a minimalist implementation based on ToRA).
+please see the `./CR-Agent` folder for the output log and prompts on the MATH dataset, we have released the code for CR Agent v0.1 (a minimalist implementation based on ToRA).
 
 ### Experimental Results
 
