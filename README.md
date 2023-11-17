@@ -66,6 +66,8 @@ These tables provide a comprehensive view of the performance of each method acro
 
 see `./CR-Agent-Assistant/cr-agent-assistant-v0.1.md` for a minimalist implementation based on OpenAI Assistant API.
 
+See https://chat.openai.com/g/g-L3a4ZCIHx-cr-agent-v0-1 for a online demo.
+
 ## Acknowledgement
 
 This repo is mainly based on [Guidance](https://github.com/microsoft/guidance), [HuggingFace](https://huggingface.co/), [Tree of Thoughts](https://github.com/princeton-nlp/tree-of-thought-llm) and [ToRA](https://github.com/microsoft/ToRA). Thanks for their wonderful work!
