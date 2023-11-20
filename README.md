@@ -66,7 +66,7 @@ These tables provide a comprehensive view of the performance of each method acro
 
 see `./CR-Agent-Assistant/cr-agent-assistant-v0.1.md` for a minimalist implementation based on OpenAI Assistant API.
 
-See https://chat.openai.com/g/g-L3a4ZCIHx-cr-agent-v0-1 for a online demo.
+See https://chat.openai.com/g/g-L3a4ZCIHx-cr-agent-v0-1 for an online demo.
 
 ---
 
