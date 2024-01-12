@@ -23,7 +23,7 @@ Official implementation of paper "Cumulative Reasoning with Large Language Model
 
 ```
 conda create -n cr python==3.10
-conda conda activate cr
+conda activate cr
 pip install -r requirements.txt
 ```
 
