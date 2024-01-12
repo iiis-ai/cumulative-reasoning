@@ -21,7 +21,11 @@ Official implementation of paper "Cumulative Reasoning with Large Language Model
 
 ## Installation
 
-`pip install -r requirements.txt`
+```
+conda create -n cr python==3.10
+conda conda activate cr
+pip install -r requirements.txt
+```
 
 For more usage help, please refer to the README.md in each subdirectory.
 
