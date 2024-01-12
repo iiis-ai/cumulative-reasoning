@@ -19,7 +19,6 @@ transformers>=4.29.2
 peft
 accelerate
 jupyter
-openai
 parsimonious
 diskcache
 pygtrie
@@ -27,3 +26,4 @@ einops
 guidance==0.0.64
 # guidance==0.0.64 for openai
 # guidance==0.0.61 for llama
+openai==0.27.8
