@@ -17,3 +17,10 @@ Make sure that your device is able to connect to [OpenAI API](https://platform.o
 `--model`: `gpt-3.5-turbo` or `gpt-4`. Default is set to be `gpt-4`. You can also choose some past version, such as `gpt-4-0314`.
 
 `--b` : number of branches.
+
+## CR Agent with Meta Prompting
+
+We have implemented the CR Agent using pure Meta Prompting to let the AI Agent directly write a Python program to solve the Game of 24 task, and **process all samples in one response, n time faster than previous methods**. 
+Please see https://github.com/meta-prompting/meta-prompting for details.
+
+- CR-Agent-XML v0.2 Solved Rate: 90.46%! Time usage: 0.04s per sample!
