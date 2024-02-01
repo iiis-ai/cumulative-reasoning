@@ -75,6 +75,13 @@ See https://chat.openai.com/g/g-L3a4ZCIHx-cr-agent-v0-1 for an online demo.
 
 **Meta Prompting (General Definition)**: [Meta Prompting](https://github.com/meta-prompting/meta-prompting) is a prompting technique inspired by type theory, emphasizing the structure and syntax of examples rather than their detailed content. It's an approach where the focus is on presenting the outline or framework of a problem or topic, offering a scaffold that can be filled with specific details as needed. This technique is particularly useful in situations where understanding the form and pattern of a problem or solution is more crucial than the specific content. 
 
+## Revisiting Game of 24
+
+We have implemented the CR Agent using pure Meta Prompting to let the AI Agent directly write a Python program to solve the Game of 24 tasks, and process all samples in one response, n time faster than previous methods. Please see https://github.com/meta-prompting/meta-prompting for details.
+
+CR-Agent-XML v0.2 Success Rate: 100%! Time usage: 0.08s per sample!
+
+Experiment log: (https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0bde8c)
 
 ## Acknowledgement
 
@@ -88,6 +95,13 @@ Please cite the paper and star this repo if you use Cumulative Reasoning (CR) an
   title={Cumulative Reasoning With Large Language Models},
   author={Zhang, Yifan and Yang, Jingqin and Yuan, Yang and Yao, Andrew Chi-Chih},
   journal={arXiv preprint arXiv:2308.04371},
+  year={2023}
+}
+
+@article{zhang2023meta,
+  title={Meta Prompting for AGI Systems},
+  author={Zhang, Yifan and Yuan, Yang and Yao, Andrew Chi-Chih},
+  journal={arXiv preprint arXiv:2311.11482},
   year={2023}
 }
 ```
