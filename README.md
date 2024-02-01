@@ -79,9 +79,15 @@ See https://chat.openai.com/g/g-L3a4ZCIHx-cr-agent-v0-1 for an online demo.
 
 We have implemented the CR Agent using pure Meta Prompting to let the AI Agent directly write a Python program to solve the Game of 24 tasks, and process all samples in one response, n time faster than previous methods. Please see https://github.com/meta-prompting/meta-prompting for details.
 
-CR-Agent-XML v0.2 Success Rate: 100%! Time usage: 0.08s per sample!
+<center>
 
-Experiment log: (https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0bde8c)
+**MP-CR-Agent-XML v0.2** Success Rate: **100%!** Time usage: **0.08s per sample!**
+
+Experiment log: ([https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0bde8c](https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0bde8c))
+
+![](./images/plot3.png)
+
+</center>
 
 ## Acknowledgement
 
