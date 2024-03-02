@@ -81,11 +81,7 @@ We have implemented the CR Agent using pure Meta Prompting to let the AI Agent d
 
 <center>
 
-**MP-CR-Agent-XML v0.2** Success Rate: **100%!** Time usage: **0.08s per sample!**
-
-Experiment log: ([https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0bde8c](https://chat.openai.com/share/01f690c7-5410-4121-992c-08ec8e0bde8c))
-
-![](./images/plot3.png)
+**MP-CR-Agent-XML v0.2** Success Rate: **100%**, Time usage: **0.08s per sample**. 
 
 </center>
 
@@ -101,13 +97,6 @@ Please cite the paper and star this repo if you use Cumulative Reasoning (CR) an
   title={Cumulative Reasoning With Large Language Models},
   author={Zhang, Yifan and Yang, Jingqin and Yuan, Yang and Yao, Andrew Chi-Chih},
   journal={arXiv preprint arXiv:2308.04371},
-  year={2023}
-}
-
-@article{zhang2023meta,
-  title={Meta Prompting for AI Systems},
-  author={Zhang, Yifan and Yuan, Yang and Yao, Andrew Chi-Chih},
-  journal={arXiv preprint arXiv:2311.11482},
   year={2023}
 }
 ```
