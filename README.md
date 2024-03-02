@@ -1,4 +1,4 @@
-# Cumulative Reasoning with Large Language Models
+# Cumulative Reasoning With Large Language Models
 
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/cumulative-reasoning-with-large-language/math-word-problem-solving-on-math)](https://paperswithcode.com/sota/math-word-problem-solving-on-math?p=cumulative-reasoning-with-large-language)
