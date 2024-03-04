@@ -7,7 +7,7 @@
 
 ## Introduction
 
-Official implementation of paper "Cumulative Reasoning with Large Language Models" (https://arxiv.org/abs/2308.04371).
+Official implementation of paper "Cumulative Reasoning with Large Language Models" [[website](https://cumulative-reasoning.github.io)] (https://arxiv.org/abs/2308.04371).
 
 - **Achieving 98% accuracy for the Game of 24 (+24% compared to Tree-of-Thoughts)!** 
 
@@ -36,7 +36,7 @@ please see the `./CR-Agent` folder for the output log and prompts on the MATH da
 
 ### Experimental Results
 
-In this section, we employed GPT-4-Turbo (GPT-4-1106-preview) with a Python code environment, devoid of additional tools like external memory and retrieval systems. The experiment involved a minimalist setup where only one reasoning context session was utilized. This session was managed by simply accumulating and concatenating the context string, and the entire process was executed using a single LLM without the assistance of a verifier LLM. Notably, the implementation was carried out purely using Python strings, without leveraging any specialized frameworks such as Langchain or guidance.
+In this section, we employed GPT-4-1106-preview with a Python code environment, devoid of additional tools like external memory and retrieval systems. The experiment involved a minimalist setup where only one reasoning context session was utilized. This session was managed by simply accumulating and concatenating the context string, and the entire process was executed using a single LLM without the assistance of a verifier LLM. Notably, the implementation was carried out purely using Python strings, without leveraging any specialized frameworks such as Langchain or guidance.
 
 The outcomes of this experimental setup revealed noteworthy results:
 - PAL (Program-Aided Language models): Achieved an accuracy of 52%.
