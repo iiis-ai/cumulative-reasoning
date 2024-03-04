@@ -5,9 +5,11 @@
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2308.04371)
 ![Python 3.10](https://img.shields.io/badge/python-3.10-green.svg)
 
+Homepage: https://cumulative-reasoning.github.io.
+
 ## Introduction
 
-Official implementation of paper "Cumulative Reasoning with Large Language Models" [[website](https://cumulative-reasoning.github.io)] (https://arxiv.org/abs/2308.04371).
+Official implementation of paper "Cumulative Reasoning with Large Language Models" (https://arxiv.org/abs/2308.04371).
 
 - **Achieving 98% accuracy for the Game of 24 (+24% compared to Tree-of-Thoughts)!** 
 
