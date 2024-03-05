@@ -98,7 +98,7 @@ Please cite the paper and star this repo if you use Cumulative Reasoning (CR) an
 @inproceedings{
   zhang2024cumulative,
   title={Cumulative Reasoning with Large Language Models},
-  author={Yifan Zhang and Jingqin Yang and Yang Yuan and Andrew C Yao},
+  author={Zhang, Yifan and Yang, Jingqin and Yuan, Yang and Yao, Andrew Chi-Chih},
   booktitle={ICLR 2024 Workshop on Bridging the Gap Between Practice and Theory in Deep Learning},
   year={2024},
   url={https://openreview.net/forum?id=XAAYyRxTlQ}
