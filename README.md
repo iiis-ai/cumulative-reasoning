@@ -9,7 +9,7 @@ Homepage: https://cumulative-reasoning.github.io.
 
 ## Introduction
 
-Official implementation of BGPT @ ICLR 2024 paper "Cumulative Reasoning with Large Language Models" (https://arxiv.org/abs/2308.04371).
+Official implementation of paper "Cumulative Reasoning with Large Language Models" (https://arxiv.org/abs/2308.04371).
 
 - **Achieving 98% accuracy for the Game of 24 (+24% compared to Tree-of-Thoughts)!** 
 
