@@ -92,7 +92,7 @@ We have implemented the CR Agent using pure Meta Prompting to let the AI Agent d
 This repo is mainly based on [Guidance](https://github.com/microsoft/guidance), [HuggingFace](https://huggingface.co/), [Tree of Thoughts](https://github.com/princeton-nlp/tree-of-thought-llm) and [ToRA](https://github.com/microsoft/ToRA). Thanks for their wonderful work!
 
 ## Citations
-Please cite the paper and star this repo if you use Cumulative Reasoning (CR) and find it interesting/useful, thanks! Feel free to contact zhangyif21@tsinghua.edu.cn | yangjq21@mails.tsinghua.edu.cn or open an issue if you have any questions.
+Please cite the paper and star this repo if you use Cumulative Reasoning (CR) and find it interesting/useful, thanks! Feel free to contact zhangyif21@mails.tsinghua.edu.cn | yangjq21@mails.tsinghua.edu.cn or open an issue if you have any questions.
 
 ```bibtex
 @article{zhang2023cumulative,
