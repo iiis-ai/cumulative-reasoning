@@ -32,7 +32,7 @@ To get started, clone the repository and set up the environment:
 
 ```bash
 # Clone the repository
-git clone [https://github.com/iiis-ai/cumulative-reasoning.git](https://github.com/iiis-ai/cumulative-reasoning.git)
+git clone https://github.com/iiis-ai/cumulative-reasoning.git
 cd cumulative-reasoning
 
 # Create and activate a conda environment
