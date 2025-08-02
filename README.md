@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![TMLR](https://img.shields.io/badge/TMLR-Published-blue)]()
+[![TMLR](https://img.shields.io/badge/TMLR-Published-blue)](https://arxiv.org/pdf/2308.04371)
 [![arXiv](https://img.shields.io/badge/arXiv-2308.04371-b31b1b.svg)](https://arxiv.org/abs/2308.04371)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 [![Website](https://img.shields.io/badge/Project-Website-green)](https://cumulative-reasoning.github.io)
